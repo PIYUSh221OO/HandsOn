@@ -1,0 +1,16 @@
+name: Manual Trigger With Input
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: "Enter your name"
+        required: true
+        default: "Guest"
+
+jobs:
+  greet-user:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "👋 Hello, ${{ github.event.inputs.username }}!"
