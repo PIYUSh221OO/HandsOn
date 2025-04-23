@@ -1,0 +1,10 @@
+name: Hello Workflow
+
+on: push  # Trigger on every push to any branch
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest  # GitHub-hosted runner
+    steps:
+      - name: Print greeting
+        run: echo "👋 Hello from GitHub Actions!"
